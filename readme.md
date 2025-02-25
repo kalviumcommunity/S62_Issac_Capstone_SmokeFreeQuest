@@ -21,14 +21,25 @@ By celebrating progress in a fun and interactive way, Smoke Free Quest keeps use
 ### Here is the plan on how I'm going to finsh my project:
 
 Day 1: Setting up the github repo 
+
 Day 2: POST API
+
 Day 3: GET API
+
 Day 4: PUT API 
+
 Day 5: Initializing the react/frontend
+
 Day 6: Database schema
+
 Day 7: Deploy frontend
+
 Day 8: Create frontend components
+
 Day 9: Low-fid design
+
 Day 10: High fid design 
+
 Day 11: Matching the website to my figma design
+
 Day 12: Implementing ‘update’ and ‘delete’ of an entity.
