@@ -1,9 +1,7 @@
 require("dotenv").config()
 const express = require("express")
-const bcrypt = require("bcryptjs")
 const mongoose = require("mongoose")
-const jwt = require("jsonwebtoken")
-const cookieParser = require("cookie-parser")
+
 const PORT = 3000
 
 const app = express()
