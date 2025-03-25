@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const mongoose = require("mongoose");
 const router = express.Router();
+const JWT = require("jsonwebtoken") 
 
 const User = mongoose.model("users", new mongoose.Schema({
     username: String,
@@ -23,12 +24,13 @@ router.post("/signup", async (req, res) => {
     res.status(201).json({ message: "User created successfully!" });
 });
 
-//get a list of all users
+//Gets All Users
 router.get("/users",async(req,res)=>{
     const users = await User.find({},"username email")
     res.json(users)
 })
 
+// Update User's Username
 router.put("/users/:id",async(req,res)=>{
     const {id} = req.params
     const {username} = req.body;
@@ -39,6 +41,21 @@ router.put("/users/:id",async(req,res)=>{
     res.json({message: "User updated successfully", username: updatedUser.username, email: updatedUser.email});
     
 })
+
+// Login Route
+router.post("/login", async (req, res) => {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email });
+    if (!user) {
+        return res.status(400).json({ message: "Invalid credentials" });
+    }
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+        return res.status(400).json({ message: "Invalid credentials" });
+    }
+    const token = JWT.sign({ id: user._id }, "your_secret_key", { expiresIn: "1h" });
+    res.json({ message: "Login successful", token });
+});
 
 
 module.exports = router;
