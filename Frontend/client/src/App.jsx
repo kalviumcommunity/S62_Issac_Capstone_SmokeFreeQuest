@@ -1,10 +1,14 @@
+import {Routes, Route} from 'react-router-dom';
+import Login from './components/Users/Login'
+import Test from './test'
 
-import './App.css'
-
-function App() {
+function App(){
   return (
     <>
-      <h3>This is the SmokeFreeQuest website</h3>
+      <Routes>
+        <Route path="/" element={<Login/>}/>
+        <Route path ="/test" element={<Test/>}/>
+      </Routes>
     </>
   )
 }
