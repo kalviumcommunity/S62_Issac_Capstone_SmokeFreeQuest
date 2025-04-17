@@ -43,3 +43,6 @@ Day 10: High fid design
 Day 11: Matching the website to my figma design
 
 Day 12: Implementing ‘update’ and ‘delete’ of an entity.
+
+
+Frontend Server link - https://s62-issac-smokefreequest.netlify.app/
