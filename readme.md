@@ -46,4 +46,5 @@ Day 12: Implementing ‘update’ and ‘delete’ of an entity.
 
 
 Frontend link - https://s62-issac-smokefreequest.netlify.app/
+
 Backend server link - https://s62-issac-capstone-smokefreequest-es38.onrender.com/
