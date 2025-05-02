@@ -48,3 +48,7 @@ Day 12: Implementing ‘update’ and ‘delete’ of an entity.
 Frontend link - https://s62-issac-smokefreequest.netlify.app/
 
 Backend server link - https://s62-issac-capstone-smokefreequest-es38.onrender.com/
+
+Low-fid figma design(Dev mode) - https://www.figma.com/design/6SvaSEv58uodOCbq3r8Dfw/Capstone---low-fid?node-id=0-1&m=dev&t=DsjxEDCDEAu33Z1E-1
+
+Low-fid figma design(Protype link) - https://www.figma.com/proto/6SvaSEv58uodOCbq3r8Dfw/Capstone---low-fid?node-id=0-1&t=DsjxEDCDEAu33Z1E-1
