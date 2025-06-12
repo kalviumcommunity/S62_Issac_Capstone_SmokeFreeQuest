@@ -1,3 +1,4 @@
+import './Login.css'
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +13,7 @@ const Login = () => {
       const response = await axios.post("http://localhost:3000/api/login", { email, password });
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user));
-      navigate("/test")
+      navigate("/home")
     } catch (error) {
       alert(error.response?.data?.message || "Login failed");
     }
