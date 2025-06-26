@@ -6,7 +6,7 @@ const PORT = 3000
 
 const app = express()
 app.use(express.json())
-app.use(cors())
+app.use(cors({origin:"https://s62-issac-smokefreequest.netlify.app"}))
 
 const routes = require("./routes")
 app.use("/api",routes)
