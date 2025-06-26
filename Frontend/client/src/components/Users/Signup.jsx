@@ -21,7 +21,7 @@ const Signup = () => {
         password
       });
 
-      alert("Signup successful! You can log in now.");
+      alert("Account Created Successfully! Please log in to start ur no smoking journey.");
       navigate("/login");
     } catch (err) {
       setError(err.response?.data?.message || "Signup failed");

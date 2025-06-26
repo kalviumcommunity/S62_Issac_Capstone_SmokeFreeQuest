@@ -1,4 +1,3 @@
-/* Signup.css */
 body {
   margin: 0;
   padding: 0;
@@ -6,24 +5,29 @@ body {
   color: #f0f0f0;
   background: #0e0e0e url('https://media1.tenor.com/m/w-KaKsLYalkAAAAC/moving-fog.gif') repeat center center fixed;
   background-size: cover;
+  overflow: hidden;
 }
 
 .signup-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.5); /* so form content stands out */
+  padding: 3rem 2rem;
+  padding-top: 4rem;
+  text-align: center;
+  background: linear-gradient(145deg, #0e0e0e, #1a1a1a);
+  border-radius: 20px;
+  box-shadow: 0 0 40px 10px #00ff8855 inset, 0 0 50px 5px #00ff8855;
+  box-sizing: border-box;
 }
-
 
 .signup-header h2 {
   font-size: 2.5rem;
   color: #00ff88;
   margin-bottom: 1rem;
-  text-shadow: 0 0 10px #00ff88aa;
+  text-shadow: 0 0 12px #00ff88aa;
 }
 
 .signup-form-wrapper {
@@ -75,6 +79,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 12px #00ff8855;
 }
 
 .signup-form button:hover {
