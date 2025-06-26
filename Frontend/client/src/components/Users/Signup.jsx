@@ -10,23 +10,23 @@ const Signup = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleSignup = async (e) => {
-    e.preventDefault();
-    setError("");
+    const handleSignup = async (e) => {
+      e.preventDefault();
+      setError("");
 
-    try {
-      await axios.post("https://smokefreequest-backend.onrender.com/api/signup", {
-        username,
-        email,
-        password
-      });
+      try {
+        await axios.post("https://smokefreequest-backend.onrender.com/api/signup", {
+          username,
+          email,
+          password
+        });
 
-      alert("Account Created Successfully! Please log in to start ur no smoking journey.");
-      navigate("/login");
-    } catch (err) {
-      setError(err.response?.data?.message || "Signup failed");
-    }
-  };
+        alert("Account Created Successfully! Please log in to start ur no smoking journey.");
+        navigate("/login");
+      } catch (err) {
+        setError(err.response?.data?.message || "Signup failed");
+      }
+    };
 
   return (
     <div className="signup-container">
