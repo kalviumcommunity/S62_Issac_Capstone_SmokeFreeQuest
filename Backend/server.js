@@ -8,13 +8,8 @@ const app = express()
 app.use(express.json())
 
 // ✅ Correct CORS setup
-const allowedOrigin = "https://s62-issac-smokefreequest.netlify.app";
-app.use(cors({
-  origin: allowedOrigin,
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
-}));
+app.use(credentials);
+app.use(cors(corsOptions));
 
 // ✅ Preflight support using same config
 app.options("*", cors({
@@ -25,6 +20,8 @@ app.options("*", cors({
 }));
 
 const routes = require("./routes")
+const credentials = require("./credentials")
+const corsOptions = require("./corsOptions")
 app.use("/api", routes)
 
 mongoose.connect(process.env.MONGO_URL)
