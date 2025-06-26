@@ -6,7 +6,15 @@ const PORT = 3000
 
 const app = express()
 app.use(express.json())
-app.use(cors({origin:"https://s62-issac-smokefreequest.netlify.app"}))
+// Allow specific origin and preflight
+app.use(cors({
+  origin: "https://s62-issac-smokefreequest.netlify.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
+
+app.options("*", cors()); // Preflight support
 
 const routes = require("./routes")
 app.use("/api",routes)
