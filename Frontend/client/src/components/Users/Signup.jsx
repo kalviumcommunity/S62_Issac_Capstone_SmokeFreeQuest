@@ -15,7 +15,7 @@ const Signup = () => {
     setError("");
 
     try {
-      await axios.post("http://localhost:3000/api/signup", {
+      await axios.post("https://smokefreequest-backend.onrender.com/api/signup", {
         username,
         email,
         password
