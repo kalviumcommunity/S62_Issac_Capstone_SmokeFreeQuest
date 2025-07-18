@@ -15,7 +15,7 @@ const Signup = () => {
       setError("");
 
       try {
-        await axios.post("https://smokefreequest-backend.onrender.com/api/signup", {
+        await axios.post("https://s62-issac-capstone-smokefreequest.onrender.com/api/signup", {
           username,
           email,
           password

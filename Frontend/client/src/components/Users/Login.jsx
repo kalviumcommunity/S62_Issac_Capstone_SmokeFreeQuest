@@ -10,7 +10,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://smokefreequest-backend.onrender.com/api/login", { email, password });
+      const response = await axios.post("https://s62-issac-capstone-smokefreequest.onrender.com/api/login", { email, password });
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user));
       navigate("/home")
