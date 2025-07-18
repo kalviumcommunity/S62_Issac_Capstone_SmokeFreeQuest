@@ -52,3 +52,6 @@ Backend server link - https://s62-issac-capstone-smokefreequest-es38.onrender.co
 Low-fid figma design(Dev mode) - https://www.figma.com/design/6SvaSEv58uodOCbq3r8Dfw/Capstone---low-fid?node-id=0-1&m=dev&t=DsjxEDCDEAu33Z1E-1
 
 Low-fid figma design(Protype link) - https://www.figma.com/proto/6SvaSEv58uodOCbq3r8Dfw/Capstone---low-fid?node-id=0-1&t=DsjxEDCDEAu33Z1E-1
+
+
+currently working on bug fixes

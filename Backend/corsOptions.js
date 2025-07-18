@@ -1,16 +1,15 @@
 const allowedOrigins = require("./aloowedOrigins");
 
 const corsOptions = {
-    origin:(origin, callback) => {
-        if(!origin || allowedOrigins.includes(origin)){
-            callback(null,true);
-        }else{
-            console.log("Blocked by CORS:", origin);
+    origin: (origin, callback) => {
+        if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+            callback(null, true);
+        } else {
             callback(new Error("Not allowed by CORS"));
         }
     },
     credentials: true,
-    optionsSuccessStatus: 200,
-}
+    optionsSuccessStatus: 200
+};
 
 module.exports = corsOptions;
